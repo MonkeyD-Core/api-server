@@ -44,7 +44,7 @@ class Block():
                 data.pop("result")
                 data["result"] = utils.make_request("getblock", [bhash])["result"]
                 data["result"]["nethash"] = int(nethash["result"])
-                data["result"]["txcount"] = data["result"]["nTx"]
+                data["result"]["tx"] = data["result"]["nTx"]
                 data["result"].pop("nTx")
 
                 result.append(data["result"])
